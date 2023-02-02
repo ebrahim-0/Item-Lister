@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
   </head>
   <body>
+    <style>
+      @media (max-width: 768px) {
+        .section .container {
+          width: 75% !important;
+        }
+      }
+    </style>
     <header class="bg-success p-2 text-white mb-3 p-4">
       <div class="container">
         <div class="row">
@@ -24,42 +31,45 @@
         </div>
       </div>
     </header>
-    <div class="container w-75">
-      <div class="card card-body">
-        <h2 class="title">Add Items</h2>
-        <form class="row g-3">
-          <div class="col-auto">
-            <input type="text" class="form-control" />
-          </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-dark mb-3">Submit</button>
-          </div>
-        </form>
-        <h2 class="title">Items</h2>
-        <ul class="list-group">
-          <li class="list-group-item">
-            item 1
-            <button class="btn btn-danger btn-sm float-end delete">X</button>
-          </li>
-          <li class="list-group-item">
-            item 2
-            <button class="btn btn-danger btn-sm float-end delete">X</button>
-          </li>
-          <li class="list-group-item">
-            item 3
-            <button class="btn btn-danger btn-sm float-end delete">X</button>
-          </li>
-          <li class="list-group-item">
-            item 4
-            <button class="btn btn-danger btn-sm float-end delete">X</button>
-          </li>
-          <li class="list-group-item">
-            item 5
-            <button class="btn btn-danger btn-sm float-end delete">X</button>
-          </li>
-        </ul>
+    <div class="section">
+      <div class="container w-50">
+        <div class="card card-body">
+          <h2 class="title">Add Items</h2>
+          <form class="row g-3">
+            <div class="col-auto">
+              <input type="text" class="form-control" />
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-dark mb-3">Submit</button>
+            </div>
+          </form>
+          <h2 class="title">Items</h2>
+          <ul class="list-group">
+            <li class="list-group-item">
+              item 1
+              <button class="btn btn-danger btn-sm float-end delete">X</button>
+            </li>
+            <li class="list-group-item">
+              item 2
+              <button class="btn btn-danger btn-sm float-end delete">X</button>
+            </li>
+            <li class="list-group-item">
+              item 3
+              <button class="btn btn-danger btn-sm float-end delete">X</button>
+            </li>
+            <li class="list-group-item">
+              item 4
+              <button class="btn btn-danger btn-sm float-end delete">X</button>
+            </li>
+            <li class="list-group-item">
+              item 5
+              <button class="btn btn-danger btn-sm float-end delete">X</button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
