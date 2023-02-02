@@ -28,8 +28,9 @@ ul.addEventListener("click", (e) => {
 filter.addEventListener("keyup", (e) => {
   const text = e.target.value.toLowerCase();
 
-  let items = ul.getElementsByTagName("li");
-  Array.from(items).forEach((li) => {
+  let items = document.querySelectorAll("ul li");
+
+  items.forEach((li) => {
     const searchItem = li.firstChild.textContent;
     if (searchItem.toLowerCase().indexOf(text) != -1) {
       li.style.display = "block";
