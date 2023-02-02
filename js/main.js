@@ -27,15 +27,27 @@ ul.addEventListener("click", (e) => {
 
 filter.addEventListener("keyup", (e) => {
   const text = e.target.value.toLowerCase();
-
   let items = document.querySelectorAll("ul li");
 
   items.forEach((li) => {
     const searchItem = li.firstChild.textContent;
+    const alert = document.querySelector(".alert");
+    alert.textContent = `${text} isn't Founded`;
+
     if (searchItem.toLowerCase().indexOf(text) != -1) {
       li.style.display = "block";
     } else {
       li.style.display = "none";
+      alert.classList.remove("d-none");
+    }
+  });
+
+  items.forEach((li) => {
+    const searchItem = li.firstChild.textContent;
+    const alert = document.querySelector(".alert");
+
+    if (searchItem.toLowerCase().indexOf(text) != -1) {
+      alert.classList.add("d-none");
     }
   });
 });
