@@ -7,15 +7,17 @@ const filter = document.querySelector(".filter");
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
-  const li = document.createElement("li");
-  li.classList.add("list-group-item");
-  li.appendChild(document.createTextNode(input.value));
-  ul.appendChild(li);
-  const btnDel = document.createElement("button");
-  btnDel.className = "btn btn-danger btn-sm float-end delete";
-  btnDel.appendChild(document.createTextNode("X"));
-  li.appendChild(btnDel);
-  input.value = "";
+  if (input.value != "") {
+    const li = document.createElement("li");
+    li.classList.add("list-group-item");
+    li.appendChild(document.createTextNode(input.value));
+    ul.appendChild(li);
+    const btnDel = document.createElement("button");
+    btnDel.className = "btn btn-danger btn-sm float-end delete";
+    btnDel.appendChild(document.createTextNode("X"));
+    li.appendChild(btnDel);
+    input.value = "";
+  }
 });
 
 ul.addEventListener("click", (e) => {
